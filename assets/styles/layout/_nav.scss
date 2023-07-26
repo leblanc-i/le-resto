@@ -1,0 +1,46 @@
+nav {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+
+    .nav-content {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 80px;
+
+        .nav-h2 {
+            width: 10%;
+        }
+
+        h2 {
+            font-family: $font1;
+            text-transform: capitalize;
+            font-size: 3rem;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu {
+            min-width: 60%;
+            margin: 0 auto;
+
+            li a {
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 0.9rem;
+            }
+
+        }
+        .social {
+            width: 10%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

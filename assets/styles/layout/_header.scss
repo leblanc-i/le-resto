@@ -1,0 +1,30 @@
+header {
+    min-height: 100vh;
+    background: url("/assets/img/bg-slider-06.jpg") center/cover;
+    color: $white1;
+    position: relative;
+}
+.header-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 6rem;
+        @include title;
+        line-height: 80px;
+        letter-spacing: 10px;
+    }
+    .icon-big {
+        margin: 65px 0 40px;
+
+
+    }
+    p {
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 8px;
+    }
+
+}
