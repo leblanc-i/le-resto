@@ -12,68 +12,44 @@
 }
 
 // Creation des variables de Police
-$font1: allura, sans-serif;
-$font2: poppins, sans-serif;
+$font1: allura, cursive;
+$font2: poppins, serif;
 $font3: robot, sans-serif;
 
 // Creation des variables couleurs
-$orange1: rgb(165,124,92);
-$white1: rgb(251, 251, 251);
-$black1: rgb(36,36,34);
-$black2: black;
-$grey1: rgb(219,214,213);
-$grey2: rgb(101,101,97);
+$orange1: rgb(166,114,69);
+$white1: #eee;
+$black1: #21201e;
+$grey1: rgb(182,182,182);
 
-@mixin title {
-    font-family: $font2;
-    text-transform: uppercase;
+@mixin childCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin alignChildren ($space) {
+    display: flex;
+    align-items: center;
+    justify-content: $space;
 }
 
+// Maniere de scroller
 html {
     scroll-behavior: smooth;
 }
-
-li {
-    list-style-type: none;
-}
-
-a, a:visited {
-    color: $white1;
-    text-decoration: none;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: $font3;
-    text-align: center;
-}
-.span-titre {
-    font-family: $font1;
-    font-weight: 100;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    color: $orange1;
-}
 .card-span {
     color: $grey1;
 }
-button {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+li {
+    list-style-type: none;
+}
+body {
+    font-family: $font3;
+    text-align: center;
     background: $black1;
-    color: $white1;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-        transform: scale(1.05);  
-    }
 }
