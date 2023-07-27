@@ -186,18 +186,121 @@ main .section1 .left p {
   font-size: 0.9rem;
 }
 main .section1 .left .mascot {
-  width: 60px;
+  width: 70px;
   border-radius: 50px;
+  margin-bottom: 8px;
 }
 main .section1 .left h4 {
-  font-weight: 400;
+  font-family: poppins, serif;
+  font-weight: 100;
   text-transform: capitalize;
 }
 main .section1 .left h5 {
-  font-weight: 100;
+  font-size: 0.7rem;
   text-transform: uppercase;
   color: rgb(182, 182, 182);
 }
 main .section1 .right {
   background: url("/assets/img/store-01.jpg") center/cover;
+}
+main .section2 {
+  margin: 40px auto;
+  position: relative;
+}
+main .section2::after {
+  content: "";
+  height: 650px;
+  width: 100%;
+  position: absolute;
+  background: url("/assets/img/bg-menu-01.jpg") center/cover;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -330px;
+  z-index: -100;
+}
+main .section2 h2 {
+  font-family: allura, cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+main .section2 .icon img {
+  margin: 20px;
+}
+main .section2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin: 30px auto;
+  color: #eee;
+  font-weight: 100;
+}
+main .section2 ul li {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  font-weight: 100;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .section2 ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+main .section2 .meals {
+  background: #eee;
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 4px solid rgb(166, 114, 69);
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+main .section2 .meals .meal {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  margin: 0 20px;
+}
+main .section2 .meals .meal img {
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+main .section2 .meals .meal .text {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+  height: 100%;
+}
+main .section2 .meals .meal .text h3 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=index.css.map */

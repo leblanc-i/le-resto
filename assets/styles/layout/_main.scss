@@ -32,21 +32,105 @@ main {
                 font-size: 0.9rem;
             }
             .mascot {
-                width: 60px;
+                width: 70px;
                 border-radius: 50px;
+                margin-bottom: 8px;
             }
             h4 {
-                font-weight: 400;
+                font-family: $font2;
+                font-weight: 100;
                 text-transform: capitalize; 
             }
             h5 {
-                font-weight: 100;
+                font-size: 0.7rem;
                 text-transform: uppercase;
                 color: $grey1;
             }
         }
         .right {
             background: url("/assets/img/store-01.jpg") center/cover;
+        }
+    }
+    .section2 {
+        margin: 40px auto;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 650px;
+            width: 100%;
+            position: absolute;
+            background: url("/assets/img/bg-menu-01.jpg") center/cover;
+            transform: translateX(-50%);
+            bottom: -330px;
+            z-index: -100;
+        }
+        h2 {
+            font-family: $font1;
+            color: $orange1;
+            font-weight: 100;
+            text-transform: capitalize;
+            font-size: 2rem;
+        }
+        .icon img {
+            margin: 20px;
+        }
+        ul {
+            @include alignChildren(space-around);
+            width: 50%;
+            margin: 30px auto;
+            color: $white1;
+            font-weight: 100;
+
+            li {
+                border-bottom: 1px solid $white1;
+                padding-bottom: 8px;
+                font-weight: 100;
+                text-transform: capitalize;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .meals {
+            background: $white1;
+            width: 85%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 4px solid $orange1;
+            padding: 15px 0;
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            .meal {
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                align-items: center;
+                padding: 30px 0;
+                margin: 0 20px;
+
+                img {
+                    border-radius: 50px;
+                    object-fit: cover;
+                    width: 100%;
+                    align-self: center;
+                }
+                .text {
+                    text-align: left;
+                    @include childCenter;
+                    flex-direction: column;
+                    margin: 0 10px;
+                    height: 100%;
+
+                    h3 {
+                        text-transform: uppercase;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
         }
     }
 }
