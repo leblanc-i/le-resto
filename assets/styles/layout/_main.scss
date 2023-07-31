@@ -52,25 +52,26 @@ main {
         }
     }
     .section2 {
-        margin: 40px auto;
+        padding-bottom: 100px;
         position: relative;
 
         &::after {
             content: "";
-            height: 650px;
+            height: 620px;
             width: 100%;
             position: absolute;
             background: url("/assets/img/bg-menu-01.jpg") center/cover;
-            transform: translateX(-50%);
+            left: 50%;
             bottom: -330px;
-            z-index: -100;
+            transform: translate(-50%, -50%);
         }
         h2 {
             font-family: $font1;
             color: $orange1;
-            font-weight: 100;
+            font-weight: 500;
             text-transform: capitalize;
             font-size: 2rem;
+            padding: 60px 0 30px;
         }
         .icon img {
             margin: 20px;
@@ -78,12 +79,13 @@ main {
         ul {
             @include alignChildren(space-around);
             width: 50%;
+            min-width: 500px;
             margin: 30px auto;
             color: $white1;
             font-weight: 100;
 
             li {
-                border-bottom: 1px solid $white1;
+                border-bottom: 1px solid $grey1;
                 padding-bottom: 8px;
                 font-weight: 100;
                 text-transform: capitalize;
@@ -97,6 +99,7 @@ main {
         }
         .meals {
             background: $white1;
+            color: $black1;
             width: 85%;
             max-width: 800px;
             margin: 0 auto;
@@ -104,11 +107,14 @@ main {
             padding: 15px 0;
             display: grid;
             grid-template-columns: 50% 50%;
+            position: relative;
+            z-index: 100;
 
             .meal {
                 display: grid;
-                grid-template-columns: 20% 60% 20%;
+                grid-template-columns: 25% 62% 13%;
                 align-items: center;
+                border-bottom: 1px dashed $grey1;
                 padding: 30px 0;
                 margin: 0 20px;
 
@@ -120,7 +126,8 @@ main {
                 }
                 .text {
                     text-align: left;
-                    @include childCenter;
+                    display: flex;
+                    justify-content: center;
                     flex-direction: column;
                     margin: 0 10px;
                     height: 100%;
@@ -128,6 +135,235 @@ main {
                     h3 {
                         text-transform: uppercase;
                         font-size: 0.8rem;
+                        color: $black1;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                    }
+                    p {
+                        text-transform: capitalize;
+                        font-weight: 100;
+                    }
+                }
+                > p {
+                    color: $orange1;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    .section3 {
+        padding: 100px 15px 65px;
+        color: $white1;
+        .container {
+            width: 85%;
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 30% 70%;
+
+            .left {
+                background: black;
+                color: $white1;
+                padding: 24px;
+                
+                .left-content {
+                    border: 1px dashed $grey1;
+                    padding: 20px 0;
+                }
+
+                h3 {
+                    font-family: $font1;
+                    color: $orange1;
+                    font-weight: 100;
+                    font-size: 2.5rem;
+                    text-transform: capitalize;
+                }
+                h4 {
+                    font-family: $font2;
+                    font-size: 1.3rem;
+                    margin-top: -16px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                img {
+                    margin-top: 25px;
+                }
+                h5 {
+                    text-transform: uppercase;
+                    color: $orange1;
+                    font-family: $font2;
+                    font-weight: 100;
+                    font-size: 1.1rem;
+                    margin: 38px 0 12px;
+                }
+                p {
+                    font-size: 0.85rem;
+                }
+            }
+            .right {
+                background: $white1;
+                color: $black1;
+                @include childCenter;
+
+                .right-content {
+                    h2 {
+                        font-family: $font1;
+                        text-transform: capitalize;
+                        color: $orange1;
+                        font-weight: 100;
+                        font-size: 2.5rem;
+                    }
+                    h3 {
+                        margin-top: -18px;
+                        font-family: $font2;
+                        text-transform: uppercase;
+                        font-size: 1.8rem;
+                    }
+                    img {
+                        margin: 25px;
+                    }
+                }
+                form {
+                    display: grid;
+                    grid-template-columns: 33% 33% 33%;
+                    margin-bottom: 30px;
+
+                    > * {
+                        padding: 10px 0;
+                        margin: 10px;
+                        background: none;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid $grey1;
+                    }
+                }
+                button {
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 50px;
+                    background: $black1;
+                    color: $white1;
+                    padding: 16px 34px;
+                    letter-spacing: 4px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .section4 {
+        @include childCenter;
+        color: $white1;
+        padding: 50px 20px 90px;
+
+        .content {
+            width: 85%;
+            max-width: 1000px;
+            
+            h2 {
+                font-family: $font1;
+                font-size: 2.5rem;
+                text-transform: capitalize;
+                color: $orange1;
+                font-weight: 100;
+            }
+            h4 {
+                font-family: $font2;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: 900;
+                letter-spacing: 2px;
+                margin-top: -12px;
+            }
+            img {
+                margin: 30px 0;
+            }
+            .card {
+                display: grid;
+                grid-template-columns: 60% 40%;
+                background: red;
+
+                .card-date {
+                    height: 86px;
+                    width: 86px;
+                    margin: 0 auto;
+                    @include childCenter;
+                    flex-direction: column;
+                    line-height: 22px;
+                    background: $black1;
+
+                    h4 {
+                        font-size: 1.7rem;
+                    }
+                }
+                p {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-left: 8px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                }
+                span {
+                    font-size: 0.9rem;
+                    color: $grey1;
+                    margin-top: 20px;
+                    display: block;letter-spacing: 1px;
+                }
+                i {
+                    margin-right: 3px;
+                    font-size: 0.7rem;
+                    transform: translateY(-2px);
+
+                    &:nth-child(2) {
+                        margin-left: 10px;
+                    }
+                }
+                h5 {
+                    letter-spacing: 2px;
+                    margin-top: 25px;
+                    text-transform: uppercase;
+                }
+                .left {
+                    text-align: left;
+                    .top {
+                        display: grid;
+                        grid-template-columns: 30% 70%;
+
+                        .left {
+                            background: url("/assets/img/event-01.jpg") center/cover;
+                            @include childCenter;
+                        }
+                        .right{
+                            background: $white1;
+                            color: $black1;
+                        }
+                    }
+                    .bottom {
+                        display: grid;
+                        grid-template-columns: 30% 70%;
+
+                        .left {
+                            background: url("/assets/img/event-02.jpg")center/cover;
+                            @include childCenter;
+                        }
+                        .right{
+                            background: $white1;
+                            color: $black1;
+                        }
+                    }
+                }
+                .rigt {
+                    background: url("/assets/img/event-03.jpg") center/cover;
+                    @include childCenter;
+
+                    .content {
+                        margin: 0 auto;
+                        background: $white1;
+                        color: $black1;
+
+                        .card-date {
+                            color: $white1;
+                            text-align: center;
+                        }
                     }
                 }
             }

@@ -204,26 +204,27 @@ main .section1 .right {
   background: url("/assets/img/store-01.jpg") center/cover;
 }
 main .section2 {
-  margin: 40px auto;
+  padding-bottom: 100px;
   position: relative;
 }
 main .section2::after {
   content: "";
-  height: 650px;
+  height: 620px;
   width: 100%;
   position: absolute;
   background: url("/assets/img/bg-menu-01.jpg") center/cover;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 50%;
   bottom: -330px;
-  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 main .section2 h2 {
   font-family: allura, cursive;
   color: rgb(166, 114, 69);
-  font-weight: 100;
+  font-weight: 500;
   text-transform: capitalize;
   font-size: 2rem;
+  padding: 60px 0 30px;
 }
 main .section2 .icon img {
   margin: 20px;
@@ -238,12 +239,13 @@ main .section2 ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 50%;
+  min-width: 500px;
   margin: 30px auto;
   color: #eee;
   font-weight: 100;
 }
 main .section2 ul li {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgb(182, 182, 182);
   padding-bottom: 8px;
   font-weight: 100;
   text-transform: capitalize;
@@ -257,6 +259,7 @@ main .section2 ul li:hover {
 }
 main .section2 .meals {
   background: #eee;
+  color: #21201e;
   width: 85%;
   max-width: 800px;
   margin: 0 auto;
@@ -264,13 +267,16 @@ main .section2 .meals {
   padding: 15px 0;
   display: grid;
   grid-template-columns: 50% 50%;
+  position: relative;
+  z-index: 100;
 }
 main .section2 .meals .meal {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 25% 62% 13%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px dashed rgb(182, 182, 182);
   padding: 30px 0;
   margin: 0 20px;
 }
@@ -290,9 +296,6 @@ main .section2 .meals .meal .text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -303,4 +306,270 @@ main .section2 .meals .meal .text {
 main .section2 .meals .meal .text h3 {
   text-transform: uppercase;
   font-size: 0.8rem;
+  color: #21201e;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+main .section2 .meals .meal .text p {
+  text-transform: capitalize;
+  font-weight: 100;
+}
+main .section2 .meals .meal > p {
+  color: rgb(166, 114, 69);
+  font-size: 1.1rem;
+}
+main .section3 {
+  padding: 100px 15px 65px;
+  color: #eee;
+}
+main .section3 .container {
+  width: 85%;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+main .section3 .container .left {
+  background: black;
+  color: #eee;
+  padding: 24px;
+}
+main .section3 .container .left .left-content {
+  border: 1px dashed rgb(182, 182, 182);
+  padding: 20px 0;
+}
+main .section3 .container .left h3 {
+  font-family: allura, cursive;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+main .section3 .container .left h4 {
+  font-family: poppins, serif;
+  font-size: 1.3rem;
+  margin-top: -16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main .section3 .container .left img {
+  margin-top: 25px;
+}
+main .section3 .container .left h5 {
+  text-transform: uppercase;
+  color: rgb(166, 114, 69);
+  font-family: poppins, serif;
+  font-weight: 100;
+  font-size: 1.1rem;
+  margin: 38px 0 12px;
+}
+main .section3 .container .left p {
+  font-size: 0.85rem;
+}
+main .section3 .container .right {
+  background: #eee;
+  color: #21201e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section3 .container .right .right-content h2 {
+  font-family: allura, cursive;
+  text-transform: capitalize;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+main .section3 .container .right .right-content h3 {
+  margin-top: -18px;
+  font-family: poppins, serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+main .section3 .container .right .right-content img {
+  margin: 25px;
+}
+main .section3 .container .right form {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-bottom: 30px;
+}
+main .section3 .container .right form > * {
+  padding: 10px 0;
+  margin: 10px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+main .section3 .container .right button {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background: #21201e;
+  color: #eee;
+  padding: 16px 34px;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+main .section4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eee;
+  padding: 50px 20px 90px;
+}
+main .section4 .content {
+  width: 85%;
+  max-width: 1000px;
+}
+main .section4 .content h2 {
+  font-family: allura, cursive;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: rgb(166, 114, 69);
+  font-weight: 100;
+}
+main .section4 .content h4 {
+  font-family: poppins, serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-top: -12px;
+}
+main .section4 .content img {
+  margin: 30px 0;
+}
+main .section4 .content .card {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background: red;
+}
+main .section4 .content .card .card-date {
+  height: 86px;
+  width: 86px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 22px;
+  background: #21201e;
+}
+main .section4 .content .card .card-date h4 {
+  font-size: 1.7rem;
+}
+main .section4 .content .card p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-left: 8px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+main .section4 .content .card span {
+  font-size: 0.9rem;
+  color: rgb(182, 182, 182);
+  margin-top: 20px;
+  display: block;
+  letter-spacing: 1px;
+}
+main .section4 .content .card i {
+  margin-right: 3px;
+  font-size: 0.7rem;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+main .section4 .content .card i:nth-child(2) {
+  margin-left: 10px;
+}
+main .section4 .content .card h5 {
+  letter-spacing: 2px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+main .section4 .content .card .left {
+  text-align: left;
+}
+main .section4 .content .card .left .top {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+main .section4 .content .card .left .top .left {
+  background: url("/assets/img/event-01.jpg") center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section4 .content .card .left .top .right {
+  background: #eee;
+  color: #21201e;
+}
+main .section4 .content .card .left .bottom {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+main .section4 .content .card .left .bottom .left {
+  background: url("/assets/img/event-02.jpg") center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section4 .content .card .left .bottom .right {
+  background: #eee;
+  color: #21201e;
+}
+main .section4 .content .card .rigt {
+  background: url("/assets/img/event-03.jpg") center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section4 .content .card .rigt .content {
+  margin: 0 auto;
+  background: #eee;
+  color: #21201e;
+}
+main .section4 .content .card .rigt .content .card-date {
+  color: #eee;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
