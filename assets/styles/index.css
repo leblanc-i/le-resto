@@ -659,4 +659,33 @@ main .section5 iframe {
   height: 350px;
   position: absolute;
   top: 180px;
+}
+
+footer {
+  padding: 300px 0 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: url("/assets/img/bg-footer.jpg") center/cover;
+  color: #eee;
+}
+footer .left .content {
+  width: 60%;
+  margin-left: 35%;
+  text-align: left;
+}
+footer .right {
+  width: 60%;
+  margin-left: 5%;
+  text-align: left;
+}
+footer .right .top {
+  display: grid;
+}
+footer .right .top input {
+  width: 200px;
+  height: 30px;
+  margin: 20px 0;
+  outline: none;
+  background: none;
+  border: 0.5px solid rgb(166, 114, 69);
 }/*# sourceMappingURL=index.css.map */

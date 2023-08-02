@@ -1,0 +1,35 @@
+footer {
+    padding: 300px 0 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: url("/assets/img/bg-footer.jpg") center/cover;
+    color: $white1;
+
+    .left {
+        .content {
+            width: 60%;
+            margin-left: 35%;
+            text-align: left;
+        }
+    }
+    .right {
+        width: 60%;
+        margin-left: 5%;
+        text-align: left;
+
+        .top {
+            display: grid;
+
+            input {
+                width: 200px;
+                height: 30px;
+                margin: 20px 0;
+                outline: none;
+                background: none;
+                border: 0.5px solid $orange1;
+            }
+
+        }
+    }
+
+}
