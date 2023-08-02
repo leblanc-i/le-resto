@@ -412,19 +412,11 @@ main .section3 .container .right button {
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
+  background: #21201e;
   color: #eee;
   padding: 16px 34px;
   letter-spacing: 4px;
   cursor: pointer;
-  background-image: #21201e; /* Dark background */
-  background-size: 200% 100%; /* Set background size to double the width (left-to-right direction) */
-  -webkit-transition: background-position 0.3s ease;
-  transition: background-position 0.3s ease;
-}
-main .section3 .container .right button:hover {
-  background-position: -100% 0; /* Move background position from left to right */
-  background-image: -webkit-gradient(linear, left top, right top, from(#222), to(#fff));
-  background-image: linear-gradient(to right, #222, #fff);
 }
 main .section4 {
   display: -webkit-box;
@@ -599,4 +591,72 @@ main .section4 .content .card .rigt .content .card-date {
   color: #eee;
   text-align: center;
   margin-bottom: 30px;
+}
+main .section5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+main .section5 .container {
+  width: 80%;
+  max-width: 950px;
+  background: #eee;
+  position: relative;
+  padding: 60px;
+  text-align: center;
+  line-height: 30px;
+  z-index: 100;
+}
+main .section5 .container .mascot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  top: -25px;
+}
+main .section5 .container p {
+  font-weight: 100;
+  font-size: 0.9rem;
+  position: relative;
+}
+main .section5 .container p i:nth-child(1) {
+  position: absolute;
+  left: -5px;
+  margin-right: 10px;
+}
+main .section5 .container p i:nth-child(2) {
+  position: absolute;
+  margin-left: 5px;
+}
+main .section5 .container h5 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 30px 0 10px;
+  color: #21201e;
+}
+main .section5 .container h6 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: rgb(166, 114, 69);
+}
+main .section5 iframe {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  top: 180px;
 }/*# sourceMappingURL=index.css.map */
