@@ -241,11 +241,28 @@ main {
                     text-transform: uppercase;
                     border: none;
                     border-radius: 50px;
-                    background: $black1;
+                    // background: $black1;
                     color: $white1;
                     padding: 16px 34px;
                     letter-spacing: 4px;
                     cursor: pointer;
+                    background-image: $black1; /* Dark background */
+                    background-size: 200% 100%; /* Set background size to double the width (left-to-right direction) */
+                    transition: background-position 0.3s ease; 
+
+                    &:hover {
+                        background-position: -100% 0; /* Move background position from left to right */
+                        background-image: linear-gradient(to right, #222, #fff);;
+                    }
+                    // @keyframes btnAnim {
+                    //     0% {
+                    //         background-position: 0 0;
+                    //       }
+                    //       100% {
+                    //         background-position: 100% 0;
+                    //       }
+                        
+                    // }
                 }
             }
         }
@@ -280,7 +297,8 @@ main {
             .card {
                 display: grid;
                 grid-template-columns: 60% 40%;
-                background: red;
+                background: $black1;
+                border: 20px solid $black1;
 
                 .card-date {
                     height: 86px;
@@ -297,10 +315,11 @@ main {
                 }
                 p {
                     font-size: 1.3rem;
-                    font-weight: 500;
+                    font-weight: 100;
                     padding-left: 8px;
                     text-transform: capitalize;
                     letter-spacing: 1px;
+                    
                 }
                 span {
                     font-size: 0.9rem;
@@ -324,9 +343,12 @@ main {
                 }
                 .left {
                     text-align: left;
+                    
                     .top {
                         display: grid;
                         grid-template-columns: 30% 70%;
+                        border-bottom: 10px solid $black1;
+                        border-right: 10px solid $black1;
 
                         .left {
                             background: url("/assets/img/event-01.jpg") center/cover;
@@ -335,11 +357,14 @@ main {
                         .right{
                             background: $white1;
                             color: $black1;
+                            padding: 30px 20px;
                         }
                     }
                     .bottom {
                         display: grid;
                         grid-template-columns: 30% 70%;
+                        border-top: 10px solid $black1;
+                        border-right: 10px solid $black1;
 
                         .left {
                             background: url("/assets/img/event-02.jpg")center/cover;
@@ -348,21 +373,36 @@ main {
                         .right{
                             background: $white1;
                             color: $black1;
+                            padding: 30px 20px;
                         }
                     }
                 }
                 .rigt {
                     background: url("/assets/img/event-03.jpg") center/cover;
                     @include childCenter;
+                    margin-left: 10px;
 
                     .content {
                         margin: 0 auto;
                         background: $white1;
                         color: $black1;
+                        height: 90%;
+
+                        p, span {
+                            margin: 0 10px;
+                        }
+                        h5 {
+                            margin-top: 60px;
+                        }
+
+                        span {
+                            padding-top: 20px;
+                        }
 
                         .card-date {
                             color: $white1;
                             text-align: center;
+                            margin-bottom: 30px;
                         }
                     }
                 }

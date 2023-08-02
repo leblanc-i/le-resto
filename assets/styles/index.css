@@ -412,11 +412,19 @@ main .section3 .container .right button {
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
-  background: #21201e;
   color: #eee;
   padding: 16px 34px;
   letter-spacing: 4px;
   cursor: pointer;
+  background-image: #21201e; /* Dark background */
+  background-size: 200% 100%; /* Set background size to double the width (left-to-right direction) */
+  -webkit-transition: background-position 0.3s ease;
+  transition: background-position 0.3s ease;
+}
+main .section3 .container .right button:hover {
+  background-position: -100% 0; /* Move background position from left to right */
+  background-image: -webkit-gradient(linear, left top, right top, from(#222), to(#fff));
+  background-image: linear-gradient(to right, #222, #fff);
 }
 main .section4 {
   display: -webkit-box;
@@ -456,7 +464,8 @@ main .section4 .content img {
 main .section4 .content .card {
   display: grid;
   grid-template-columns: 60% 40%;
-  background: red;
+  background: #21201e;
+  border: 20px solid #21201e;
 }
 main .section4 .content .card .card-date {
   height: 86px;
@@ -483,7 +492,7 @@ main .section4 .content .card .card-date h4 {
 }
 main .section4 .content .card p {
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 100;
   padding-left: 8px;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -515,6 +524,8 @@ main .section4 .content .card .left {
 main .section4 .content .card .left .top {
   display: grid;
   grid-template-columns: 30% 70%;
+  border-bottom: 10px solid #21201e;
+  border-right: 10px solid #21201e;
 }
 main .section4 .content .card .left .top .left {
   background: url("/assets/img/event-01.jpg") center/cover;
@@ -531,10 +542,13 @@ main .section4 .content .card .left .top .left {
 main .section4 .content .card .left .top .right {
   background: #eee;
   color: #21201e;
+  padding: 30px 20px;
 }
 main .section4 .content .card .left .bottom {
   display: grid;
   grid-template-columns: 30% 70%;
+  border-top: 10px solid #21201e;
+  border-right: 10px solid #21201e;
 }
 main .section4 .content .card .left .bottom .left {
   background: url("/assets/img/event-02.jpg") center/cover;
@@ -551,6 +565,7 @@ main .section4 .content .card .left .bottom .left {
 main .section4 .content .card .left .bottom .right {
   background: #eee;
   color: #21201e;
+  padding: 30px 20px;
 }
 main .section4 .content .card .rigt {
   background: url("/assets/img/event-03.jpg") center/cover;
@@ -563,13 +578,25 @@ main .section4 .content .card .rigt {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 10px;
 }
 main .section4 .content .card .rigt .content {
   margin: 0 auto;
   background: #eee;
   color: #21201e;
+  height: 90%;
+}
+main .section4 .content .card .rigt .content p, main .section4 .content .card .rigt .content span {
+  margin: 0 10px;
+}
+main .section4 .content .card .rigt .content h5 {
+  margin-top: 60px;
+}
+main .section4 .content .card .rigt .content span {
+  padding-top: 20px;
 }
 main .section4 .content .card .rigt .content .card-date {
   color: #eee;
   text-align: center;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=index.css.map */
