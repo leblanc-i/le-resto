@@ -10,16 +10,23 @@ header {
 
         .titres {
             margin-top: -300px;
-
         }
-
         h2 {
             font-family: $font1;
             color: $orange1;
             font-size: 3.5rem;
             font-weight: 100;
             margin-bottom: 10px;
+            transform: translateX(-200px);
+            opacity: 0;
+            animation: h2Anim 2s ease  forwards;
 
+            @keyframes h2Anim {
+                to {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
             &::first-letter {
                 text-transform: capitalize;
             }
@@ -31,15 +38,41 @@ header {
             font-weight: 700;
             font-size: 4rem;
             margin-top: -35px;
+            transform: translateX(200px);
+            opacity: 0;
+            animation: h1Anim 2s ease forwards;
+            animation-delay: 1s;
+
+            @keyframes h1Anim {
+                to {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
         }
         img {
             height: 50px;
             margin: 65px 0;
+            transform: translateY(300px);
+            opacity: 0;
+            animation: contentAnim 2s ease forwards;
+            animation-delay: 2s;
         }
         p {
             font-size: 1.2rem;
             font-weight: 100;
             letter-spacing: 6px;
+            transform: translateY(300px);
+            opacity: 0;
+            animation: contentAnim 2s ease forwards;
+            animation-delay: 2s;
+
+            @keyframes contentAnim {
+                to {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
         }
     }
 }
