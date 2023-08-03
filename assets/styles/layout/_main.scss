@@ -4,6 +4,12 @@ main {
         grid-template-columns: 50% 50%;
         background: $white1;
 
+        @media screen and (max-width: 1000px) {
+            display: block;
+            min-height: 412px;
+            
+        }
+
         .left {
             min-height: 300px;
             background: $white1;
@@ -49,6 +55,9 @@ main {
         }
         .right {
             background: url("/assets/img/store-01.jpg") center/cover;
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
         }
     }
     .section2 {
@@ -84,6 +93,13 @@ main {
             color: $white1;
             font-weight: 100;
 
+            @media screen and (max-width: 495px) {
+                @include alignChildren(space-around);
+                width: 40%;
+                min-width: 250px;
+                font-size: 0.7rem;
+            }
+
             li {
                 border-bottom: 1px solid $grey1;
                 padding-bottom: 8px;
@@ -110,6 +126,10 @@ main {
             grid-template-columns: 50% 50%;
             position: relative;
             z-index: 100;
+
+            @media screen and (max-width: 1000px) {
+                display: block;
+            }
 
             .meal {
                 display: grid;
@@ -161,6 +181,14 @@ main {
             margin: 0 auto;
             display: grid;
             grid-template-columns: 30% 70%;
+
+            @media screen and (max-width: 1000px) {
+                display: block;
+
+                button {
+                    margin-bottom: 30px;
+                }
+            }
 
             .left {
                 background: black;
@@ -228,6 +256,11 @@ main {
                     grid-template-columns: 33% 33% 33%;
                     margin-bottom: 30px;
 
+                    @media screen and (max-width: 590px) {
+                        display: grid;
+                        grid-template-columns: 100%;
+                    }
+
                     > * {
                         padding: 10px 0;
                         margin: 10px;
@@ -261,6 +294,10 @@ main {
         @include childCenter;
         color: $white1;
         padding: 50px 20px 90px;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
 
         .content {
             width: 85%;
@@ -434,6 +471,10 @@ main {
                 font-size: 0.9rem;
                 position: relative;
 
+                @media screen and (max-width: 540px) {
+                    font-size: 0.6rem;
+                }
+
                 i:nth-child(1) {
                     position: absolute;
                     left: -5px;
@@ -461,7 +502,18 @@ main {
             width: 100%;
             height: 350px;
             position: absolute;
-            top: 180px;
+            top: 220px;
+
+            @media screen and (max-width: 540px) {
+                top: 260px;
+            }
+            @media screen and (max-width: 390px) {
+                top: 360px;
+            }
+           
+            
+            
+
         }
     }
 }

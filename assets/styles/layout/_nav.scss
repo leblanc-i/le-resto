@@ -6,6 +6,11 @@ nav {
     margin: 0 auto;
     align-items: center;
 
+    @media screen and (max-width: 640px) {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
     h3 {
         font-family: $font1;
         font-size: 2rem;
@@ -27,6 +32,10 @@ nav {
         padding: 0 30px;
         cursor: pointer;
 
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+
         li {
             text-transform: uppercase;
             font-size: 0.7rem;
@@ -40,6 +49,10 @@ nav {
     div {
         @include alignChildren(space-around);
         text-align: right;
+
+        @media screen and (max-width: 640px) {
+            @include alignChildren(space-between);
+        }
         
         i {
             font-size: 0.8rem;

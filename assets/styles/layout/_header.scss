@@ -10,6 +10,13 @@ header {
 
         .titres {
             margin-top: -300px;
+
+            @media screen and (max-width: 1000px) {
+                margin: -10px 0 0;
+            }
+            @media screen and (max-width: 640px) {
+                margin: -200px 0 0;
+            }
         }
         h2 {
             font-family: $font1;
@@ -20,6 +27,10 @@ header {
             transform: translateX(-200px);
             opacity: 0;
             animation: h2Anim 2s ease  forwards;
+
+            @media screen and (max-width: 1000px) {
+                
+            }
 
             @keyframes h2Anim {
                 to {
@@ -42,6 +53,10 @@ header {
             opacity: 0;
             animation: h1Anim 2s ease forwards;
             animation-delay: 1s;
+
+            @media screen and (max-width: 1000px) {
+                
+            }
 
             @keyframes h1Anim {
                 to {
